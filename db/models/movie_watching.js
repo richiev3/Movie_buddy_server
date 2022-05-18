@@ -12,6 +12,14 @@ const MovieWatching= db.define("movies_watching", {
             notEmpty: true,
         }
     },
+    movie_name: {
+        type:Sequelize.STRING,
+        allowNull: false
+    },
+    voteAverage: Sequelize.DECIMAL,
+    releaseDate: Sequelize.STRING,
+    overview: Sequelize.TEXT,
+    imageUrl: Sequelize.STRING,
 });
 
 module.exports = MovieWatching;

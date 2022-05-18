@@ -4,7 +4,7 @@ const MovieWatching = require('./movie_watching');
 
 
 
-MovieWatching.belongsTo(User);
+MovieWatching.belongsTo(User); 
 MovieWatched.belongsTo(User);
 
 

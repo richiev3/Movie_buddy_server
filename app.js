@@ -1,20 +1,23 @@
 const createDB = require('./db/utils/createDB');
 const seedDB = require('./db/utils/seedDB');
 const db = require('./db');
+const cors = require('cors');
 
-const syncDatabase = async () => {
-    try {
-        await db.sync({force:true});
-        console.log('---------Synced to db----------');
-        await seedDB();
-        console.log('-------------Successfully seeded db---------------');
-    }
-    catch (err){
-        console.error('syncDB error:', err);
-    }
-}
+
+// const syncDatabase = async () => {
+//     try {
+//         await db.sync({force:true});
+//         console.log('---------Synced to db----------');
+//         await seedDB();
+//         console.log('-------------Successfully seeded db---------------');
+//     }
+//     catch (err){
+//         console.error('syncDB error:', err);
+//     }
+// }
 const express = require('express');
 const app = express();
+app.use(cors());
 const apiRouter = require('./routes/index');
 /* CONFIGURE EXPRESS APPLICATION */
 // Create a function to configure the Express application
@@ -46,7 +49,7 @@ const configureApp = async () => {
   // Construct the boot process by incorporating all needed processes
   const bootApp = async () => {
     await createDB();  // Create database (if not exists)
-    await syncDatabase();  // Seed the database
+    // await syncDatabase();  // Seed the database
     await configureApp();  // Start and configure Express application
   };
   
