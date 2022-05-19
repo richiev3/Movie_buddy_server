@@ -20,7 +20,7 @@ const seedDB = async () => {
 		movie_name: "Sonic the Hedgehog 2",
 		overview: "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands."
 	});
-	const dummy_movie_wathching_1 = await MovieWatching.create({
+	const dummy_movie_wathching_1 = await MovieWatched.create({
 		movie_id: 675353,
 		movie_name: "Sonic the Hedgehog 2",
 		overview: "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands."

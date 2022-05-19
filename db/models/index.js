@@ -1,18 +1,17 @@
 const User = require('./user');
 const MovieWatched = require('./movie_watched');
-const MovieWatching = require('./movie_watching');
+// const MovieWatching = require('./movie_watching');
 
 
 
-MovieWatching.belongsTo(User); 
+// MovieWatching.belongsTo(User); 
 MovieWatched.belongsTo(User);
 
 
 User.hasMany(MovieWatched);
-User.hasMany(MovieWatching);
+// User.hasMany(MovieWatching);
 
 module.exports = {
     User,
-    MovieWatching,
     MovieWatched
 };
